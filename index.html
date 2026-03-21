@@ -70,7 +70,7 @@
             <img src="images/icon_cbd_lotus.png" alt="CBD">
           </div>
           <div class="bottle-name">CBD</div>
-          <div class="bottle-sub">нормализация сна</div>
+          <div class="bottle-sub">нормализация<br>сна</div>
         </div>
       </div>
     </div>
@@ -203,10 +203,12 @@
         </div>
         <div class="solution-card-body">
           <span class="sol-tag">для мозга</span>
-          <div class="sol-effect"><i class="fas fa-check"></i> Улучшает память и концентрацию</div>
-          <div class="sol-effect"><i class="fas fa-check"></i> Стимулирует рост нейронов (NGF)</div>
-          <div class="sol-effect"><i class="fas fa-check"></i> Защищает от возрастных изменений</div>
-          <div class="sol-effect"><i class="fas fa-check"></i> Снижает «туман» в голове</div>
+          <div class="sol-effects-list">
+            <div class="sol-effect"><i class="fas fa-check"></i> Улучшает память и концентрацию</div>
+            <div class="sol-effect"><i class="fas fa-check"></i> Стимулирует рост нейронов (NGF)</div>
+            <div class="sol-effect"><i class="fas fa-check"></i> Защищает от возрастных изменений</div>
+            <div class="sol-effect"><i class="fas fa-check"></i> Снижает «туман» в голове</div>
+          </div>
         </div>
       </div>
       <div class="solution-card card card--hover">
@@ -217,10 +219,12 @@
         </div>
         <div class="solution-card-body">
           <span class="sol-tag">для энергии</span>
-          <div class="sol-effect"><i class="fas fa-check"></i> Повышает выносливость до 30%</div>
-          <div class="sol-effect"><i class="fas fa-check"></i> Насыщает кровь кислородом</div>
-          <div class="sol-effect"><i class="fas fa-check"></i> Убирает хроническую усталость</div>
-          <div class="sol-effect"><i class="fas fa-check"></i> Поддерживает иммунитет</div>
+          <div class="sol-effects-list">
+            <div class="sol-effect"><i class="fas fa-check"></i> Повышает выносливость до 30%</div>
+            <div class="sol-effect"><i class="fas fa-check"></i> Насыщает кровь кислородом</div>
+            <div class="sol-effect"><i class="fas fa-check"></i> Убирает хроническую усталость</div>
+            <div class="sol-effect"><i class="fas fa-check"></i> Поддерживает иммунитет</div>
+          </div>
         </div>
       </div>
       <div class="solution-card card card--hover">
@@ -231,10 +235,12 @@
         </div>
         <div class="solution-card-body">
           <span class="sol-tag">для спокойствия</span>
-          <div class="sol-effect"><i class="fas fa-check"></i> Снимает тревогу</div>
-          <div class="sol-effect"><i class="fas fa-check"></i> Нормализует сон</div>
-          <div class="sol-effect"><i class="fas fa-check"></i> Уменьшает воспаление</div>
-          <div class="sol-effect"><i class="fas fa-check"></i> Без психоактивного эффекта</div>
+          <div class="sol-effects-list">
+            <div class="sol-effect"><i class="fas fa-check"></i> Снимает тревогу</div>
+            <div class="sol-effect"><i class="fas fa-check"></i> Нормализует сон</div>
+            <div class="sol-effect"><i class="fas fa-check"></i> Уменьшает воспаление</div>
+            <div class="sol-effect"><i class="fas fa-check"></i> Без психоактивного эффекта</div>
+          </div>
         </div>
       </div>
     </div>
@@ -247,35 +253,39 @@
     <h2 class="section-title" data-aos="fade-down">Как они работают вместе</h2>
     <p class="section-sub" data-aos="fade-up" data-aos-delay="100">Синергетический эффект: три экстракта усиливают действие друг друга</p>
     <div class="synergy-scheme" data-aos="zoom-in" data-aos-delay="200">
-      <div class="synergy-flow">
-        <div class="synergy-flow-row">
-          <div class="syn-node card card--outline card--hover">
-            <img src="images/icon_mushroom_brain.png" alt="Ежовик" class="synergy-icon">
-            <div class="syn-node-name">Ежовик</div>
-            <div class="syn-node-key">нейроны + память</div>
-          </div>
-          <div class="syn-arrow">+</div>
-          <div class="syn-node syn-center card">
-            <img src="images/icon_synergy.png" alt="Синергия" class="synergy-icon">
-            <div class="syn-node-name syn-center-title">СИНЕРГИЯ</div>
-            <div class="syn-node-key syn-center-sub">максимальный эффект</div>
-          </div>
-          <div class="syn-arrow">+</div>
-          <div class="syn-node card card--outline card--hover">
-            <img src="images/icon_mushroom_energy.png" alt="Кордицепс" class="synergy-icon">
-            <div class="syn-node-name">Кордицепс</div>
-            <div class="syn-node-key">энергия + кислород</div>
-          </div>
+      <!-- Orbital ring -->
+      <div class="orbit-container">
+        <div class="orbit-ring"></div>
+        <div class="orbit-center">
+          <div class="orbit-center-icon"><i class="fas fa-infinity"></i></div>
+          <div class="orbit-center-title">СИНЕРГИЯ</div>
+          <div class="orbit-center-sub">максимальный эффект</div>
         </div>
-        <div class="synergy-flow-row synergy-flow-row--offset">
-          <div class="syn-arrow">+</div>
-          <div class="syn-node card card--outline card--hover">
-            <span class="syn-node-emoji">🌿</span>
-            <div class="syn-node-name">CBD</div>
-            <div class="syn-node-key">покой + сон</div>
+        <div class="orbit-track">
+          <div class="orbit-item orbit-item--1">
+            <div class="orbit-card">
+              <img src="images/icon_mushroom_brain.png" alt="Ежовик" class="orbit-icon">
+              <div class="orbit-name">Ежовик</div>
+              <div class="orbit-key">нейроны + память</div>
+            </div>
+          </div>
+          <div class="orbit-item orbit-item--2">
+            <div class="orbit-card">
+              <img src="images/icon_mushroom_energy.png" alt="Кордицепс" class="orbit-icon">
+              <div class="orbit-name">Кордицепс</div>
+              <div class="orbit-key">энергия + кислород</div>
+            </div>
+          </div>
+          <div class="orbit-item orbit-item--3">
+            <div class="orbit-card">
+              <img src="images/icon_cbd_lotus.png" alt="CBD" class="orbit-icon">
+              <div class="orbit-name">CBD</div>
+              <div class="orbit-key">покой + сон</div>
+            </div>
           </div>
         </div>
       </div>
+      <!-- Results -->
       <div class="synergy-results">
         <div class="syn-result" data-aos="fade-up" data-aos-delay="100"><i class="fas fa-brain"></i><p>Ясный ум и острая память</p></div>
         <div class="syn-result" data-aos="fade-up" data-aos-delay="200"><i class="fas fa-bolt"></i><p>Стабильная энергия весь день</p></div>
