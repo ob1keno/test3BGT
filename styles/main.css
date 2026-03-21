@@ -216,8 +216,20 @@ section{padding:80px 0}
   .flip-front,.flip-back{backface-visibility:visible;-webkit-backface-visibility:visible}
   .flip-card.flipped .flip-card-inner{transform:none}
   /* на мобиле делаем аккордеон: текст спрятан до клика */
-  .flip-back{margin-top:12px;border-top:2px solid #8AB17D;display:none}
-  .flip-card.flipped .flip-back{display:block}
+  .flip-back{
+    margin-top:12px;
+    border-top:2px solid #8AB17D;
+    max-height:0;
+    opacity:0;
+    transform:translateY(-6px);
+    overflow:hidden;
+    transition:max-height .45s ease, opacity .35s ease, transform .35s ease;
+  }
+  .flip-card.flipped .flip-back{
+    max-height:700px;
+    opacity:1;
+    transform:translateY(0);
+  }
   .flip-hint{display:inline-flex}
 }
 
