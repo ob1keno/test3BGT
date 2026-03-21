@@ -150,7 +150,7 @@ section{padding:80px 0}
 @media(max-width:768px){.nav{display:none}.header-btn{display:none}}
 
 /* ===== БЛОК 1: ГЕРОЙ ===== */
-.hero{background-image:url('../images/bg-hero.jpg');background-size:cover;background-position:center 30%;background-attachment:fixed;padding:90px 0 80px;overflow:hidden;position:relative}
+.hero{background-image:url('images/bg-hero.jpg');background-size:cover;background-position:center 30%;background-attachment:fixed;padding:90px 0 80px;overflow:hidden;position:relative}
 .hero::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(249,246,240,.65) 0%,rgba(239,245,234,.55) 50%,rgba(249,246,240,.61) 100%);z-index:1;pointer-events:none}
 .hero .container{position:relative;z-index:2}
 .hero::before{content:'';position:absolute;top:-50px;right:-50px;width:400px;height:400px;background:radial-gradient(circle,rgba(138,177,125,.12) 0%,transparent 70%);pointer-events:none}
@@ -245,7 +245,7 @@ section{padding:80px 0}
 @media(max-width:500px){.problems-grid{grid-template-columns:1fr}}
 
 /* ===== БЛОК 3: ПРОДУКТ (РЕШЕНИЕ) ===== */
-.solution{background-image:url('../images/bg-solution.jpg');background-size:cover;background-position:center;background-attachment:fixed;position:relative}
+.solution{background-image:url('images/bg-solution.jpg');background-size:cover;background-position:center;background-attachment:fixed;position:relative}
 .solution::before{content:'';position:absolute;inset:0;background:rgba(239,245,234,.71);z-index:0;pointer-events:none}
 .solution .container{position:relative;z-index:1}
 .solution-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-6);margin-top:var(--space-5)}
@@ -280,7 +280,7 @@ section{padding:80px 0}
 @media(max-width:768px){.synergy-flow{flex-direction:column}.syn-arrow{transform:rotate(90deg)}.synergy-results{grid-template-columns:1fr}}
 
 /* ===== БЛОК 5: НАУЧНАЯ БАЗА ===== */
-.science{background-image:url('../images/bg-science.jpg');background-size:cover;background-position:center;background-attachment:fixed;color:#fff;position:relative}
+.science{background-image:url('images/bg-science.jpg');background-size:cover;background-position:center;background-attachment:fixed;color:#fff;position:relative}
 .science::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(45,62,45,.92) 0%,rgba(61,90,61,.88) 100%);z-index:0;pointer-events:none}
 .science .container{position:relative;z-index:1}
 .science .section-title{color:#fff}
@@ -297,7 +297,7 @@ section{padding:80px 0}
 @media(max-width:768px){.science-grid{grid-template-columns:1fr}}
 
 /* ===== БЛОК 6: СОСТАВ ПОДРОБНО ===== */
-.composition{background-image:url('../images/bg-composition.jpg');background-size:cover;background-position:center top;background-attachment:fixed;position:relative}
+.composition{background-image:url('images/bg-composition.jpg');background-size:cover;background-position:center top;background-attachment:fixed;position:relative}
 .composition::before{content:'';position:absolute;inset:0;background:rgba(249,246,240,.73);z-index:0;pointer-events:none}
 .composition .container{position:relative;z-index:1}
 .comp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-6)}
@@ -315,7 +315,7 @@ details p{padding:12px 16px;font-size:.88rem;color:#4a5e4a;background:#fff;borde
 @media(max-width:768px){.comp-grid{grid-template-columns:1fr}}
 
 /* ===== БЛОК 7: КАК ПРИНИМАТЬ ===== */
-.howto{background-image:url('../images/bg-howto.jpg');background-size:cover;background-position:center center;background-attachment:fixed;position:relative;overflow:hidden}
+.howto{background-image:url('images/bg-howto.jpg');background-size:cover;background-position:center center;background-attachment:fixed;position:relative;overflow:hidden}
 .howto::before{content:'';position:absolute;inset:0;background:rgba(255,255,255,.75);z-index:0;pointer-events:none}
 .howto .container{position:relative;z-index:1}
 .timeline{display:flex;gap:0;position:relative;margin-top:20px}
@@ -363,7 +363,7 @@ details p{padding:12px 16px;font-size:.88rem;color:#4a5e4a;background:#fff;borde
 @media(max-width:500px){.reviews-grid{grid-template-columns:1fr}}
 
 /* ===== БЛОК 10: ОСНОВАТЕЛЬ ===== */
-.founder{background-image:url('../images/bg-founder.jpg');background-size:cover;background-position:center 40%;background-attachment:fixed;position:relative}
+.founder{background-image:url('images/bg-founder.jpg');background-size:cover;background-position:center 40%;background-attachment:fixed;position:relative}
 .founder::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(239,245,234,.88) 0%,rgba(249,246,240,.84) 100%);z-index:0;pointer-events:none}
 .founder .container{position:relative;z-index:1}
 .founder-layout{display:grid;grid-template-columns:auto 1fr;gap:60px;align-items:center}
@@ -385,7 +385,7 @@ details p{padding:12px 16px;font-size:.88rem;color:#4a5e4a;background:#fff;borde
 .faq-item details p{padding:16px 22px;font-size:.95rem;color:#4a5e4a;line-height:1.7;background:#fff}
 
 /* ===== БЛОК 12: АКЦИЯ ===== */
-.promo{background-image:url('../images/bg-promo.jpg');background-size:cover;background-position:center;background-attachment:fixed;color:#fff;text-align:center;position:relative}
+.promo{background-image:url('images/bg-promo.jpg');background-size:cover;background-position:center;background-attachment:fixed;color:#fff;text-align:center;position:relative}
 .promo::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(45,62,45,.68) 0%,rgba(61,90,61,.63) 100%);z-index:0;pointer-events:none}
 .promo .container{position:relative;z-index:1}
 .promo .section-title{color:#fff}
@@ -403,7 +403,7 @@ details p{padding:12px 16px;font-size:.88rem;color:#4a5e4a;background:#fff;borde
 .promo-note{margin-top:14px;font-size:.85rem;color:rgba(255,255,255,.5)}
 
 /* ===== БЛОК 13: ФОРМА ЗАКАЗА ===== */
-.order{background-color:#F9F6F0;background-image:url('../images/bg-pattern.jpg');background-size:320px 320px;background-repeat:repeat;background-attachment:scroll;position:relative}
+.order{background-color:#F9F6F0;background-image:url('images/bg-pattern.jpg');background-size:320px 320px;background-repeat:repeat;background-attachment:scroll;position:relative}
 .order::before{content:'';position:absolute;inset:0;background:rgba(249,246,240,.75);z-index:0;pointer-events:none}
 .order .container{position:relative;z-index:1}
 .order-options{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-5);margin-bottom:var(--space-8)}
