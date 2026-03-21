@@ -49,11 +49,6 @@ section{padding:80px 0}
 .btn:hover::after{opacity:1}
 .btn-outline{background:transparent;color:var(--sage);border:2px solid var(--sage)}
 .btn-outline:hover{background:var(--sage);color:var(--white)}
-.tag{display:inline-block;background:var(--sand);color:#7a5c2e;font-size:.8rem;font-weight:600;padding:.3rem .8rem;border-radius:20px;margin-bottom:1rem;letter-spacing:.5px;text-transform:uppercase}
-.grid{display:grid;gap:var(--space-6)}
-.grid-2{grid-template-columns:repeat(2,1fr)}
-.grid-3{grid-template-columns:repeat(3,1fr)}
-.grid-4{grid-template-columns:repeat(4,1fr)}
 
 @media(max-width:768px){
   section{padding:60px 0}
@@ -111,8 +106,6 @@ section{padding:80px 0}
 .badge--sand{background:var(--sand);color:#7a5c2e}
 .badge--sage{background:rgba(138,177,125,.12);color:var(--sage)}
 
-.pill{display:inline-flex;align-items:center;gap:6px;padding:.25rem .7rem;border-radius:12px;font-size:.78rem;font-weight:600;background:var(--sand);color:#7a5c2e}
-
 .list-check{list-style:none;padding:0;margin:0}
 .list-check li{position:relative;padding-left:22px;margin-bottom:8px;font-size:.9rem;color:var(--text)}
 .list-check li::before{content:'✓';position:absolute;left:0;top:0;color:var(--sage);font-weight:700}
@@ -167,7 +160,6 @@ section{padding:80px 0}
 .hero-products{display:flex;gap:15px;justify-content:center;align-items:flex-end}
 .product-bottle{background:var(--white);border-radius:20px;padding:20px;text-align:center;box-shadow:0 10px 30px rgba(45,62,45,.1);border:1px solid #e8e0d5;transition:transform .3s;flex:1;max-width:160px}
 .product-bottle:hover{transform:translateY(-6px)}
-.bottle-emoji{font-size:3rem;margin-bottom:10px;display:block}
 .bottle-name{font-weight:700;font-size:.9rem;color:var(--forest);margin-bottom:4px}
 .bottle-sub{font-size:.78rem;color:var(--sage);font-weight:500}
 
@@ -233,17 +225,6 @@ section{padding:80px 0}
   .flip-hint{display:inline-flex}
 }
 
-/* ===== БЛОК 2: ПРОБЛЕМЫ ===== */
-.problems{background:#fff}
-.problems-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--space-6)}
-.problem-card{background:#F9F6F0;border-radius:20px;padding:30px 24px;border:1px solid #e8d5b5;transition:all .3s;text-align:center}
-.problem-card:hover{transform:translateY(-5px);box-shadow:0 12px 30px rgba(45,62,45,.1);border-color:#8AB17D}
-.problem-icon{font-size:2.5rem;margin-bottom:1rem;display:block}
-.problem-card h3{font-size:1.05rem;margin-bottom:.5rem}
-.problem-card p{font-size:.9rem;color:#6b7d6b}
-@media(max-width:900px){.problems-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:500px){.problems-grid{grid-template-columns:1fr}}
-
 /* ===== БЛОК 3: ПРОДУКТ (РЕШЕНИЕ) ===== */
 .solution{background-image:url('images/bg-solution.jpg');background-size:cover;background-position:center;background-attachment:fixed;position:relative}
 .solution::before{content:'';position:absolute;inset:0;background:rgba(239,245,234,.71);z-index:0;pointer-events:none}
@@ -252,7 +233,6 @@ section{padding:80px 0}
 .solution-card{background:#fff;border-radius:24px;overflow:hidden;box-shadow:0 8px 24px rgba(45,62,45,.08);border:1px solid #e8e0d5;transition:all .3s}
 .solution-card:hover{transform:translateY(-6px);box-shadow:0 15px 35px rgba(45,62,45,.14)}
 .solution-card-top{padding:30px 25px 20px;text-align:center}
-.sol-emoji{font-size:3.5rem;margin-bottom:1rem;display:block}
 .solution-card-body{padding:0 25px 28px}
 .sol-tag{display:inline-block;background:#E8D5B5;color:#7a5c2e;font-size:.75rem;font-weight:600;padding:.25rem .7rem;border-radius:12px;margin-bottom:.8rem;text-transform:uppercase;letter-spacing:.4px}
 .sol-effect{display:flex;align-items:center;gap:8px;font-size:.88rem;color:#4a5e4a;margin-bottom:6px}
@@ -296,7 +276,7 @@ section{padding:80px 0}
 .sci-logo{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:12px;padding:12px 20px;font-size:.85rem;color:rgba(255,255,255,.6);font-weight:500}
 @media(max-width:768px){.science-grid{grid-template-columns:1fr}}
 
-/* ===== БЛОК 6: СОСТАВ ПОДРОБНО ===== */
+/* ===== БЛОК 8: СОСТАВ ПОДРОБНО ===== */
 .composition{background-image:url('images/bg-composition.jpg');background-size:cover;background-position:center top;background-attachment:fixed;position:relative}
 .composition::before{content:'';position:absolute;inset:0;background:rgba(249,246,240,.73);z-index:0;pointer-events:none}
 .composition .container{position:relative;z-index:1}
@@ -314,7 +294,7 @@ details[open] summary::after{content:'−'}
 details p{padding:12px 16px;font-size:.88rem;color:#4a5e4a;background:#fff;border-top:1px solid #e8d5b5;line-height:1.6}
 @media(max-width:768px){.comp-grid{grid-template-columns:1fr}}
 
-/* ===== БЛОК 7: КАК ПРИНИМАТЬ ===== */
+/* ===== БЛОК 9: КАК ПРИНИМАТЬ ===== */
 .howto{background-image:url('images/bg-howto.jpg');background-size:cover;background-position:center center;background-attachment:fixed;position:relative;overflow:hidden}
 .howto::before{content:'';position:absolute;inset:0;background:rgba(255,255,255,.75);z-index:0;pointer-events:none}
 .howto .container{position:relative;z-index:1}
@@ -330,7 +310,7 @@ details p{padding:12px 16px;font-size:.88rem;color:#4a5e4a;background:#fff;borde
 .tl-pill{display:inline-block;background:#E8D5B5;color:#7a5c2e;font-size:.78rem;font-weight:600;padding:.25rem .7rem;border-radius:12px}
 @media(max-width:600px){.timeline{flex-direction:column;gap:20px}.timeline::before{display:none}}
 
-/* ===== БЛОК 8: РЕЗУЛЬТАТЫ ===== */
+/* ===== БЛОК 10: РЕЗУЛЬТАТЫ ===== */
 .results{background:#F9F6F0}
 .results-layout{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-10);align-items:center}
 .progress-list{display:flex;flex-direction:column;gap:20px}
@@ -347,7 +327,7 @@ details p{padding:12px 16px;font-size:.88rem;color:#4a5e4a;background:#fff;borde
 .ts-desc{font-size:.9rem;color:#4a5e4a}
 @media(max-width:768px){.results-layout{grid-template-columns:1fr}}
 
-/* ===== БЛОК 9: ОТЗЫВЫ ===== */
+/* ===== БЛОК 11: ОТЗЫВЫ ===== */
 .reviews{background:#fff}
 .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-6)}
 .review-card{background:#F9F6F0;border-radius:22px;padding:28px;border:1px solid #e8d5b5;position:relative;transition:transform .3s}
@@ -362,7 +342,7 @@ details p{padding:12px 16px;font-size:.88rem;color:#4a5e4a;background:#fff;borde
 @media(max-width:900px){.reviews-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:500px){.reviews-grid{grid-template-columns:1fr}}
 
-/* ===== БЛОК 10: ОСНОВАТЕЛЬ ===== */
+/* ===== БЛОК 12: ОСНОВАТЕЛЬ ===== */
 .founder{background-image:url('images/bg-founder.jpg');background-size:cover;background-position:center 40%;background-attachment:fixed;position:relative}
 .founder::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(239,245,234,.88) 0%,rgba(249,246,240,.84) 100%);z-index:0;pointer-events:none}
 .founder .container{position:relative;z-index:1}
@@ -376,7 +356,7 @@ details p{padding:12px 16px;font-size:.88rem;color:#4a5e4a;background:#fff;borde
 .cred{background:#fff;border:1px solid #e8d5b5;border-radius:10px;padding:6px 14px;font-size:.83rem;color:#4a5e4a;font-weight:500}
 @media(max-width:768px){.founder-layout{grid-template-columns:1fr;text-align:center}.founder-photo{margin:0 auto}.founder-quote{padding-left:0;border-left:none;border-top:3px solid #8AB17D;padding-top:15px}.founder-creds{justify-content:center}}
 
-/* ===== БЛОК 11: FAQ ===== */
+/* ===== БЛОК 13: FAQ ===== */
 .faq{background:#fff}
 .faq-list{max-width:800px;margin:0 auto;display:flex;flex-direction:column;gap:12px}
 .faq-item{border:1px solid #e8d5b5;border-radius:16px;overflow:hidden}
@@ -384,7 +364,7 @@ details p{padding:12px 16px;font-size:.88rem;color:#4a5e4a;background:#fff;borde
 .faq-item details summary:hover{background:#EFF5EA}
 .faq-item details p{padding:16px 22px;font-size:.95rem;color:#4a5e4a;line-height:1.7;background:#fff}
 
-/* ===== БЛОК 12: АКЦИЯ ===== */
+/* ===== БЛОК 14: АКЦИЯ ===== */
 .promo{background-image:url('images/bg-promo.jpg');background-size:cover;background-position:center;background-attachment:fixed;color:#fff;text-align:center;position:relative}
 .promo::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(45,62,45,.68) 0%,rgba(61,90,61,.63) 100%);z-index:0;pointer-events:none}
 .promo .container{position:relative;z-index:1}
@@ -402,7 +382,7 @@ details p{padding:12px 16px;font-size:.88rem;color:#4a5e4a;background:#fff;borde
 .promo .btn:hover{background:#6d9660}
 .promo-note{margin-top:14px;font-size:.85rem;color:rgba(255,255,255,.5)}
 
-/* ===== БЛОК 13: ФОРМА ЗАКАЗА ===== */
+/* ===== БЛОК 15: ФОРМА ЗАКАЗА ===== */
 .order{background-color:#F9F6F0;background-image:url('images/bg-pattern.jpg');background-size:320px 320px;background-repeat:repeat;background-attachment:scroll;position:relative}
 .order::before{content:'';position:absolute;inset:0;background:rgba(249,246,240,.75);z-index:0;pointer-events:none}
 .order .container{position:relative;z-index:1}
@@ -423,7 +403,7 @@ details p{padding:12px 16px;font-size:.88rem;color:#4a5e4a;background:#fff;borde
 .form-disclaimer a{color:#8AB17D;text-decoration:none}
 @media(max-width:768px){.order-options{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}}
 
-/* ===== БЛОК 14: ДОСТАВКА И ОПЛАТА ===== */
+/* ===== БЛОК 16: ДОСТАВКА И ОПЛАТА ===== */
 .delivery{background:#fff}
 .delivery-grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-10);align-items:start}
 .delivery-list{display:flex;flex-direction:column;gap:var(--space-4)}
@@ -436,7 +416,7 @@ details p{padding:12px 16px;font-size:.88rem;color:#4a5e4a;background:#fff;borde
 .pay-icon{height:38px;background:#F9F6F0;border:1px solid #e8d5b5;border-radius:8px;padding:6px 14px;font-size:.85rem;font-weight:600;color:#4a5e4a;display:flex;align-items:center;gap:6px}
 @media(max-width:768px){.delivery-grid{grid-template-columns:1fr}}
 
-/* ===== БЛОК 15: ФУТЕР ===== */
+/* ===== ФУТЕР ===== */
 .footer{background:#2D3E2D;color:rgba(255,255,255,.7);padding:48px 0 28px}
 .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:var(--space-10);margin-bottom:var(--space-8)}
 .footer-brand .logo{color:#fff}
@@ -448,9 +428,8 @@ details p{padding:12px 16px;font-size:.88rem;color:#4a5e4a;background:#fff;borde
 .footer-col ul li a:hover{color:#8AB17D}
 .footer-socials{display:flex;gap:10px;margin-top:14px}
 .social-btn{width:38px;height:38px;border-radius:10px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.6);text-decoration:none;font-size:1rem;transition:transform .3s, background .3s, border-color .3s}
-.social-btn:hover{transform:translateY(-2px)}
-.social-btn:hover{background:#8AB17D;border-color:#8AB17D;color:#fff}
-.footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:gap;font-size:.83rem}
+.social-btn:hover{transform:translateY(-2px);background:#8AB17D;border-color:#8AB17D;color:#fff}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;font-size:.83rem}
 .footer-bottom a{color:rgba(255,255,255,.4);text-decoration:none;transition:color .3s}
 .footer-bottom a:hover{color:#8AB17D}
 @media(max-width:768px){.footer-grid{grid-template-columns:1fr}.footer-bottom{flex-direction:column;gap:10px;text-align:center}}
@@ -458,7 +437,4 @@ details p{padding:12px 16px;font-size:.88rem;color:#4a5e4a;background:#fff;borde
 /* Лёгкие дополнительные эффекты */
 .fade-up{opacity:0;transform:translateY(30px);transition:all .6s ease}
 .fade-up.visible{opacity:1;transform:translateY(0)}
-.glow-hover{transition:all .3s ease}
-.glow-hover:hover{box-shadow:0 0 20px rgba(138,177,125,.3);transform:translateY(-2px)}
 .pulse{animation:pulse 2s infinite}@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
-.rotate-icon{transition:transform .5s ease}.rotate-icon:hover{transform:rotate(360deg)}
