@@ -213,6 +213,8 @@ section{padding:80px 0}
   .flip-card{height:auto;min-height:auto}
   .flip-card-inner{transform-style:flat;position:relative;height:auto;transform:none}
   .flip-front,.flip-back{position:relative;transform:none;height:auto}
+  .flip-front,.flip-back{backface-visibility:visible;-webkit-backface-visibility:visible}
+  .flip-card.flipped .flip-card-inner{transform:none}
   /* на мобиле делаем аккордеон: текст спрятан до клика */
   .flip-back{margin-top:12px;border-top:2px solid #8AB17D;display:none}
   .flip-card.flipped .flip-back{display:block}
