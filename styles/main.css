@@ -114,7 +114,8 @@ section{padding:80px 0}
 .evidence-source{margin-top:10px;font-size:.8rem;color:rgba(255,255,255,.55)}
 
 .pharma-grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-6)}
-.pharma-card{padding:24px;border-radius:var(--radius-lg)}
+.pharma-card{padding:24px;border-radius:var(--radius-lg);transition:transform .3s,box-shadow .3s}
+.pharma-card:hover{transform:translateY(-5px);box-shadow:0 14px 30px rgba(45,62,45,.13)}
 .pharma-card h3{font-size:1.2rem;margin-bottom:12px;color:var(--forest)}
 .pharma-card p{font-size:.95rem;line-height:1.7;color:var(--text)}
 
@@ -122,6 +123,7 @@ section{padding:80px 0}
 .value-card-item{padding:20px 22px;border-radius:var(--radius-md)}
 .value-card-item h3{font-size:1.05rem;margin-bottom:8px;color:var(--forest)}
 .value-card-item p{font-size:.9rem;line-height:1.6;color:var(--text)}
+@media(max-width:900px){.results-layout.layout-gap-30{grid-template-columns:1fr}}
 
 @media(max-width:900px){
   .pharma-grid{grid-template-columns:1fr}
@@ -138,6 +140,21 @@ section{padding:80px 0}
 .nav a:hover{color:var(--sage)}
 .header-btn{padding:.6rem 1.4rem;font-size:.9rem}
 @media(max-width:768px){.nav{display:none}.header-btn{display:none}}
+/* Burger button */
+.burger{display:none;flex-direction:column;justify-content:space-between;width:28px;height:20px;background:none;border:none;cursor:pointer;padding:0;z-index:1001}
+.burger span{display:block;height:2px;background:var(--forest);border-radius:2px;transition:all .3s}
+.burger.open span:nth-child(1){transform:translateY(9px) rotate(45deg)}
+.burger.open span:nth-child(2){opacity:0}
+.burger.open span:nth-child(3){transform:translateY(-9px) rotate(-45deg)}
+@media(max-width:768px){.burger{display:flex}}
+/* Mobile nav overlay */
+.mobile-nav{position:fixed;inset:0;background:rgba(249,246,240,.97);backdrop-filter:blur(12px);z-index:999;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .35s}
+.mobile-nav.open{opacity:1;pointer-events:all}
+.mobile-nav-close{position:absolute;top:20px;right:20px;background:none;border:none;font-size:2rem;cursor:pointer;color:var(--forest);line-height:1}
+.mobile-nav-links{display:flex;flex-direction:column;align-items:center;gap:28px;text-align:center}
+.mobile-nav-link{font-size:1.5rem;font-weight:600;color:var(--forest);text-decoration:none;transition:color .3s}
+.mobile-nav-link:hover{color:var(--sage)}
+.mobile-nav-btn{font-size:1.1rem;padding:.9rem 2.5rem;margin-top:10px}
 
 /* ===== БЛОК 1: ГЕРОЙ ===== */
 .hero{background-image:url('../images/bg-hero.jpg');background-size:cover;background-position:center 30%;background-attachment:fixed;padding:90px 0 80px;overflow:hidden;position:relative}
@@ -356,7 +373,7 @@ details p{padding:12px 16px;font-size:.88rem;color:#4a5e4a;background:#fff;borde
 .reviews{background:#fff}
 .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-6)}
 .review-card{background:#F9F6F0;border-radius:22px;padding:28px;border:1px solid #e8d5b5;position:relative;transition:transform .3s}
-.review-card:hover{transform:translateY(-4px);box-shadow:0 12px 28px rgba(45,62,45,.1)}
+.review-card:hover{transform:translateY(-4px);box-shadow:0 12px 28px rgba(138,177,125,.18);border-color:rgba(138,177,125,.4)}
 .review-quote{font-size:3rem;color:#E8D5B5;font-family:Georgia,serif;line-height:.8;margin-bottom:.5rem}
 .review-text{font-size:.95rem;color:#4a5e4a;line-height:1.7;margin-bottom:1.2rem;font-style:italic}
 .reviewer{display:flex;align-items:center;gap:12px}
@@ -388,6 +405,8 @@ details p{padding:12px 16px;font-size:.88rem;color:#4a5e4a;background:#fff;borde
 .faq-item details summary{padding:18px 22px;font-weight:600;font-size:1rem;cursor:pointer;background:#F9F6F0;color:#2D3E2D}
 .faq-item details summary:hover{background:#EFF5EA}
 .faq-item details p{padding:16px 22px;font-size:.95rem;color:#4a5e4a;line-height:1.7;background:#fff}
+.faq-item details[open] p{animation:faqOpen .35s ease forwards}
+@keyframes faqOpen{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:translateY(0)}}
 
 /* ===== БЛОК 14: АКЦИЯ ===== */
 .promo{background-image:url('../images/bg-promo.jpg');background-size:cover;background-position:center;background-attachment:fixed;color:#fff;text-align:center;position:relative}
@@ -406,6 +425,13 @@ details p{padding:12px 16px;font-size:.88rem;color:#4a5e4a;background:#fff;borde
 .promo .btn{background:#8AB17D;border:none;font-size:1.05rem;padding:1rem 2.5rem}
 .promo .btn:hover{background:#6d9660}
 .promo-note{margin-top:14px;font-size:.85rem;color:rgba(255,255,255,.5)}
+@media(max-width:600px){
+  .timer{gap:8px}
+  .timer-block{padding:12px 14px;min-width:62px}
+  .timer-num{font-size:1.8rem}
+  .promo-gifts{flex-direction:column;align-items:center;gap:10px}
+  .gift-item{width:100%;max-width:260px;justify-content:center}
+}
 
 /* ===== БЛОК 15: ФОРМА ЗАКАЗА ===== */
 .order{background-color:#F9F6F0;background-image:url('../images/bg-pattern.jpg');background-size:320px 320px;background-repeat:repeat;background-attachment:scroll;position:relative}
@@ -432,7 +458,8 @@ details p{padding:12px 16px;font-size:.88rem;color:#4a5e4a;background:#fff;borde
 .delivery{background:#fff}
 .delivery-grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-10);align-items:start}
 .delivery-list{display:flex;flex-direction:column;gap:var(--space-4)}
-.delivery-item{display:flex;align-items:flex-start;gap:14px;background:#F9F6F0;border-radius:14px;padding:16px}
+.delivery-item{display:flex;align-items:flex-start;gap:14px;background:#F9F6F0;border-radius:14px;padding:16px;transition:transform .3s,box-shadow .3s,border-color .3s;border:1px solid transparent}
+.delivery-item:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(45,62,45,.1);border-color:rgba(138,177,125,.35);background:#fff}
 .delivery-icon{width:44px;height:44px;background:#8AB17D;border-radius:12px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.1rem;flex-shrink:0}
 .delivery-item h4{font-size:.95rem;margin-bottom:.2rem;color:#2D3E2D}
 .delivery-item p{font-size:.85rem;color:#6b7d6b}
@@ -463,3 +490,6 @@ details p{padding:12px 16px;font-size:.88rem;color:#4a5e4a;background:#fff;borde
 .fade-up{opacity:0;transform:translateY(30px);transition:all .6s ease}
 .fade-up.visible{opacity:1;transform:translateY(0)}
 .pulse{animation:pulse 2s infinite}@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
+/* Ripple effect */
+.btn-ripple-effect{position:absolute;border-radius:50%;transform:scale(0);animation:rippleAnim .6s linear;background:rgba(255,255,255,.35);pointer-events:none}
+@keyframes rippleAnim{to{transform:scale(4);opacity:0}}
