@@ -148,8 +148,8 @@ section{padding:80px 0}
 .burger.open span:nth-child(3){transform:translateY(-9px) rotate(-45deg)}
 @media(max-width:768px){.burger{display:flex}}
 /* Mobile nav overlay */
-.mobile-nav{position:fixed;inset:0;background:rgba(249,246,240,.97);backdrop-filter:blur(12px);z-index:999;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .35s}
-.mobile-nav.open{opacity:1;pointer-events:all}
+.mobile-nav{display:none;position:fixed;inset:0;background:rgba(249,246,240,.97);backdrop-filter:blur(12px);z-index:999;align-items:center;justify-content:center;opacity:0;transition:opacity .35s}
+.mobile-nav.open{display:flex;opacity:1;pointer-events:all}
 .mobile-nav-close{position:absolute;top:20px;right:20px;background:none;border:none;font-size:2rem;cursor:pointer;color:var(--forest);line-height:1}
 .mobile-nav-links{display:flex;flex-direction:column;align-items:center;gap:28px;text-align:center}
 .mobile-nav-link{font-size:1.5rem;font-weight:600;color:var(--forest);text-decoration:none;transition:color .3s}
