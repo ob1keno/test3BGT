@@ -1,3 +1,21 @@
+// Burger menu
+const burger = document.getElementById('burger');
+const mobileNav = document.getElementById('mobileNav');
+const mobileNavClose = document.getElementById('mobileNavClose');
+function openMobileNav(){burger.classList.add('open');mobileNav.classList.add('open');document.body.style.overflow='hidden';}
+function closeMobileNav(){burger.classList.remove('open');mobileNav.classList.remove('open');document.body.style.overflow='';}
+if(burger) burger.addEventListener('click', openMobileNav);
+if(mobileNavClose) mobileNavClose.addEventListener('click', closeMobileNav);
+document.querySelectorAll('.mobile-nav-link, .mobile-nav-btn').forEach(a=>a.addEventListener('click', closeMobileNav));
+
+// iOS parallax fix — background-attachment:fixed broken on iOS
+const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) || (navigator.platform==='MacIntel' && navigator.maxTouchPoints>1);
+if(isIOS){
+  document.querySelectorAll('.hero,.solution,.science,.composition,.howto,.founder,.promo').forEach(el=>{
+    el.style.backgroundAttachment='scroll';
+  });
+}
+
 // Таймер обратного отсчета
 (function(){
   let h=23,m=47,s=12;
@@ -49,7 +67,18 @@ if (window.gsap && window.ScrollTrigger) {
     });
   });
 }
-// IntersectionObserver для .fade-up (отдельный, чтобы не конфликтовать с другим observer)
+// Ripple effect на кнопках
+document.querySelectorAll('.btn').forEach(btn => {
+  btn.addEventListener('click', function(e) {
+    const ripple = document.createElement('span');
+    ripple.classList.add('btn-ripple-effect');
+    const size = Math.max(this.offsetWidth, this.offsetHeight);
+    const rect = this.getBoundingClientRect();
+    ripple.style.cssText = `width:${size}px;height:${size}px;left:${e.clientX-rect.left-size/2}px;top:${e.clientY-rect.top-size/2}px`;
+    this.appendChild(ripple);
+    ripple.addEventListener('animationend', () => ripple.remove());
+  });
+});
 const fadeObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -161,4 +190,3 @@ document.querySelectorAll('.fade-up').forEach(el => fadeObserver.observe(el));
 //   resize();
 //   requestAnimationFrame(step);
 // })();
-
