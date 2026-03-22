@@ -8,8 +8,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fraunces:wght@500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <script type="module" crossorigin src="/test3BGT/assets/index-CRtdWMna.js"></script>
-  <link rel="stylesheet" crossorigin href="/test3BGT/assets/index-ZpTw6J1c.css">
+  <script type="module" crossorigin src="/test3BGT/assets/index-C676xCwq.js"></script>
+  <link rel="stylesheet" crossorigin href="/test3BGT/assets/index-D17kOCm-.css">
 </head>
 <body>
 
@@ -108,7 +108,7 @@
 
     <div class="flip-grid" data-aos="fade-up" data-aos-delay="100">
       
-      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card" onclick="this.classList.toggle('flipped')" ontouchstart="this.classList.toggle('flipped');event.preventDefault()">
         <div class="flip-card-inner">
           <div class="flip-front">
             <div class="flip-icon"><img src="/test3BGT/assets/algoritm-BbPyP30Y.png" alt="" class="flip-icon-img"></div>
@@ -129,7 +129,7 @@
       </div>
 
       
-      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card" onclick="this.classList.toggle('flipped')" ontouchstart="this.classList.toggle('flipped');event.preventDefault()">
         <div class="flip-card-inner">
           <div class="flip-front">
             <div class="flip-icon"><img src="/test3BGT/assets/naturebrain-BZGyeDCZ.png" alt="" class="flip-icon-img"></div>
@@ -149,7 +149,7 @@
       </div>
 
       
-      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card" onclick="this.classList.toggle('flipped')" ontouchstart="this.classList.toggle('flipped');event.preventDefault()">
         <div class="flip-card-inner">
           <div class="flip-front">
             <div class="flip-icon"><img src="/test3BGT/assets/newreality-77TACk7P.png" alt="" class="flip-icon-img"></div>
@@ -818,6 +818,18 @@
   </div>
 </footer>
 
+
+<!-- Sticky панель покупки -->
+<div class="sticky-bar" id="stickyBar">
+  <div class="sticky-bar-inner">
+    <div class="sticky-bar-info">
+      <span class="sticky-bar-title">«Три богатыря»</span>
+      <span class="sticky-bar-price">9 900 ₽ <s class="sticky-bar-old">10 900 ₽</s></span>
+    </div>
+    <a href="#order" class="sticky-bar-btn btn pulse">Заказать сейчас</a>
+    <button class="sticky-bar-close" id="stickyBarClose" aria-label="Закрыть">✕</button>
+  </div>
+</div>
 
 <!-- AOS CSS теперь импортируется в main.js -->
 
